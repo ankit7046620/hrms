@@ -255,7 +255,8 @@ class LoginView extends GetView<LoginController> {
   Widget _buildForgotPassword() {
     return TextButton(
       onPressed: controller.forgotPassword,
-      child: const Text(
+      Widget:
+      Text(
         'Forgot Password?',
         style: TextStyle(
           color:  Color(0xFF163049), // Changed to white70 for better contrast
