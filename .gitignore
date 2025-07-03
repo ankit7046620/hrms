@@ -1,0 +1,15 @@
+# .gitignore
+
+build/
+*.apk
+*.ipa
+*.so
+*.zip
+*.tar.gz
+*.lock
+*.log
+*.tmp
+.flutter-plugins
+.dart_tool/
+.packages
+.pub/
