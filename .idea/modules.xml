@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/amax_hr.iml" filepath="$PROJECT_DIR$/amax_hr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/amax_hr_android.iml" filepath="$PROJECT_DIR$/android/amax_hr_android.iml" />
     </modules>
   </component>
 </project>

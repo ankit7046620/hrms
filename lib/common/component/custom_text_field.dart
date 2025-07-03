@@ -8,7 +8,11 @@ class CustomTextField extends StatelessWidget {
   final String? Function(String?)? validator;
   final InputDecoration? decoration;
 
-  const CustomTextField({Key? key, required this.controller, required this.labelText, this.keyboardType, this.obscureText = false, this.validator, this.decoration})
+  final dynamic hintText;
+  final dynamic prefixIcon;
+  final dynamic suffixIcon;
+
+  const CustomTextField({Key? key, required this.controller, required this.labelText,this.hintText,this.prefixIcon,this.suffixIcon, this.keyboardType, this.obscureText = false, this.validator, this.decoration})
       : super(key: key);
 
   @override
@@ -24,7 +28,7 @@ class CustomTextField extends StatelessWidget {
             labelText: labelText,
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
             filled: true,
-            fillColor: Colors.grey.shade100,
+            fillColor: Colors.white,
             contentPadding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
           ),
     );
