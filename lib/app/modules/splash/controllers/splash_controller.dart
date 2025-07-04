@@ -1,23 +1,26 @@
+import 'package:amax_hr/utils/app.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '../../../routes/app_pages.dart';
+import 'package:amax_hr/utils/app_funcation.dart';
 
 class SplashController extends GetxController {
-  //TODO: Implement SplashController
-
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
+    _navigateBasedOnOnboarding();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
+  Future<void> _navigateBasedOnOnboarding() async {
+    await Future.delayed(const Duration(seconds: 2)); // splash delay
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool seen = prefs.getBool(LocalKeys.onboardingSeen) ?? false;
 
-  @override
-  void onClose() {
-    super.onClose();
+    if (seen) {
+      AppFunction.goToAndReplace(Routes.LOGIN);
+    } else {
+      AppFunction.goToAndReplace(Routes.ONBOARDING);
+    }
   }
-
-  void increment() => count.value++;
 }

@@ -8,6 +8,10 @@ class HeadersKey {
   static const String iOS = "iOS";
 }
 
+class LocalKeys{
+  static const String onboardingSeen= "onboarding_seen";
+}
+
 class EdgeInsetType {
   static const double xxxxxxxs = 2;
   static const double xxxxxxs = 5;
@@ -19,7 +23,7 @@ class EdgeInsetType {
   static const double s = 20;
   static const double m = 25;
   static const double l = 30;
-  static const double xl = 45;
+  static const double xl = 40;
   static const double xxl = 50;
   static const double xxxl = 55;
   static const double xxxxl = 60;

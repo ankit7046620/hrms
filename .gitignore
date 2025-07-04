@@ -13,3 +13,6 @@ build/
 .dart_tool/
 .packages
 .pub/
+
+# FVM Version Cache
+.fvm/
